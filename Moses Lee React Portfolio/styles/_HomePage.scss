@@ -1,0 +1,71 @@
+.HomePage {
+	
+	&__content {
+		@extend %column;
+		
+		section {
+			@extend %row;
+			
+			background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/280549/site-bg.png');
+			
+			text-align: center;
+			
+			h1,
+			h2,
+			h3,
+			h4,
+			h5,
+			h6 {
+				text-align: center;
+			}
+		}
+		
+		.About {
+			padding-bottom: 1rem;
+		}
+		
+		.PopularPens {
+			position: relative;
+			min-height: 400px;
+			
+			padding: 2rem 1rem;
+			margin-bottom: 2rem;
+			
+			&__content {
+				@extend %row;
+
+			}
+			
+			&__wrapper {
+				width: 100%;
+				max-width: $row-width;
+				
+				display: flex;
+				flex-flow: column nowrap;
+				justify-content: center;
+			}
+			
+			&__pens {
+				position: relative;
+				min-height: 250px;
+
+				display: flex;
+				flex-flow: row wrap;
+				justify-content: center;
+			}
+			
+			.PenCard {
+				text-align: left;
+				
+				h1,h2,h3,h4,h5,h6 {
+					text-align: left;
+				}
+			}
+			
+			.Button {
+				align-self: center;
+				margin-top: 2rem;
+			}
+		}
+	}
+}

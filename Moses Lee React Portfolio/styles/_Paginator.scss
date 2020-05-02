@@ -1,0 +1,50 @@
+.Paginator {
+	@extend %row;
+	justify-content: center;
+	
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+		flex-flow: row wrap;
+		
+		width: 100%;
+		max-width: $row-width;
+	}
+	
+	&__controls {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		
+		width: 100%;
+		
+		margin-top: 2rem;
+	}
+	
+	&__button {
+		flex-grow: 1;
+		a {
+			display: block;
+			padding: 1rem;
+			
+			color: $color-gray;
+			text-align: center;
+			border-radius: 10px;
+			background-color: $color-primary-red;
+			
+			transition: all 0.2s ease-in-out;
+			
+			&:hover {
+				background-color: darken($color-primary-red, 10%);
+			}
+		}
+	}
+	
+	&__prev {
+		
+	}
+	
+	&__next {
+		
+	}
+}

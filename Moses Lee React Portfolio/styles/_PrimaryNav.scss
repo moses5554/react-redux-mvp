@@ -1,0 +1,73 @@
+.PrimaryNav {
+	display: flex;
+	justify-content: center;
+	
+	padding: 1rem;
+	
+	transition: all 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+	
+	&__wrapper {
+		display: flex;
+		flex-flow: row nowrap;
+		align-items: center;
+		justify-content: space-between;
+		
+		width: 100%;
+		max-width: $row-width;
+	}
+	
+	&__logo {
+		align-self: flex-start;
+		
+		height: 100px;
+		width: 100px;
+		
+		background-color: $color-gray;
+		transition: all 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+		
+		border-radius: 50%;
+	}
+	
+	&__listItems {
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: flex-end;
+		
+		padding: 0;
+		margin: 0;
+	}
+	
+	&__listItem {
+		
+		transform: skew(-#{$skew-angle});
+		
+		&:not(:last-of-type) {
+			border-right: 1px solid #fff;
+		}
+
+		&:last-of-type {
+			a {
+				padding-right: 0;
+			}
+		}
+		
+		&:hover {
+			a {
+				color: $color-primary-blue;
+			}
+		}
+		
+		a {
+			display: block;
+			
+			padding: 1rem 2rem;
+			
+			color: $color-gray;
+			text-decoration: none;
+			text-shadow: 2px 2px black;
+			
+			transform: skew(#{$skew-angle});
+			transition: all 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+		}
+	}
+}

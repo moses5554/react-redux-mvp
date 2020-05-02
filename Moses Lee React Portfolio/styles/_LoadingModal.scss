@@ -1,0 +1,41 @@
+.LoadingModal {
+	position: absolute;
+	top: 0;
+	left: 0;
+	
+	height: 100%;
+	width: 100%;
+	
+	background: rgba($color-dark-gray, 0.6);
+	
+	&__text {
+		display: block;
+		
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		
+		transform: translate(-50%, -50%);
+		
+		&::after {
+			display: inline-block;
+			
+			content: "\f110";
+			font-family: FontAwesome;
+			
+			margin-left: 1rem;
+			
+			animation: spinInfinite 5s forwards;
+		}
+	}
+}
+
+@keyframes spinInfinite {
+	from {
+		transform: rotate(0);
+	}
+	
+	to {
+		transform: rotate(360deg);
+	}
+}

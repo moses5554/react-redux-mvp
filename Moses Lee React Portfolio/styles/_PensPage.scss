@@ -1,0 +1,37 @@
+.PensPage {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	
+	&.loading {
+		
+	}
+	
+	&.completed {
+		
+	}
+	
+	&__content {
+		@extend %row;
+		
+	}
+	
+	&__wrapper {
+		
+		
+		width: 100%;
+		max-width: $row-width;
+		
+		
+	}
+	
+	&__pens {
+		position: relative;
+		min-height: 400px;
+		
+		display: flex;
+		flex-flow: row wrap;
+		
+		margin: 0 -1rem;
+	}
+}

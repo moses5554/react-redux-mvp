@@ -1,0 +1,466 @@
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+html {
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/280549/site-bg.png");
+  color: #ccc;
+  font-size: 20px;
+  font-family: 'Montserrat';
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: #0799df;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+main > .content {
+  min-height: 700px;
+}
+
+.masked--top {
+  padding: 5rem 1rem;
+  margin-top: -7rem;
+  width: 100%;
+  -webkit-clip-path: url(#mask_0);
+          clip-path: url(#mask_0);
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/280549/site-bg.png");
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #ccc;
+}
+
+p {
+  color: #ccc;
+}
+
+li {
+  list-style-type: none;
+}
+
+.HomePage__content {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-flow: column nowrap;
+      flex-flow: column nowrap;
+}
+
+.OnVisible, .Paginator, .HomePage__content section, .HomePage__content .PopularPens__content, .AboutPage__content, .PensPage__content {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
+}
+
+.PrimaryNav {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  padding: 1rem;
+  transition: all 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.PrimaryNav__wrapper {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row nowrap;
+      flex-flow: row nowrap;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  width: 100%;
+  max-width: 60rem;
+}
+
+.PrimaryNav__logo {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  height: 100px;
+  width: 100px;
+  background-color: #CCC;
+  transition: all 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+  border-radius: 50%;
+}
+
+.PrimaryNav__listItems {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row nowrap;
+      flex-flow: row nowrap;
+  -ms-flex-pack: end;
+      justify-content: flex-end;
+  padding: 0;
+  margin: 0;
+}
+
+.PrimaryNav__listItem {
+  transform: skew(-20deg);
+}
+
+.PrimaryNav__listItem:not(:last-of-type) {
+  border-right: 1px solid #fff;
+}
+
+.PrimaryNav__listItem:last-of-type a {
+  padding-right: 0;
+}
+
+.PrimaryNav__listItem:hover a {
+  color: #1d57af;
+}
+
+.PrimaryNav__listItem a {
+  display: block;
+  padding: 1rem 2rem;
+  color: #CCC;
+  text-decoration: none;
+  text-shadow: 2px 2px black;
+  transform: skew(20deg);
+  transition: all 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.Banner {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 5rem 1rem 12rem;
+  min-height: 400px;
+  width: 100%;
+}
+
+.Banner__wrapper {
+  width: 100%;
+  max-width: 60rem;
+}
+
+.Banner__content {
+  background: rgba(204, 204, 204, 0.65);
+  padding: 1rem;
+}
+
+.Button {
+  margin-top: 1rem;
+  background-color: #960c12;
+  min-width: 200px;
+  transition: all 0.2s ease-in-out;
+  border-radius: 10px;
+}
+
+.Button:hover {
+  background-color: #67080c;
+}
+
+.Button a {
+  display: block;
+  padding: 1rem;
+  color: #CCC;
+}
+
+.Header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  height: 100px;
+  width: 100%;
+  transition: all 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.Header.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #333;
+}
+
+.Header.sticky .PrimaryNav__logo {
+  height: 50px;
+  width: 50px;
+}
+
+.Header.sticky .PrimaryNav__listItem a {
+  padding: 0.5rem 1rem;
+}
+
+.Footer {
+  padding: 1rem;
+  text-align: center;
+  background-color: #333;
+}
+
+.ParticleCanvas {
+  min-height: 400px;
+  max-height: 500px;
+  width: 100%;
+}
+
+.OnVisible {
+  opacity: 0;
+}
+
+.OnVisible.visible {
+  opacity: 1;
+}
+
+.OnVisible__wrapper {
+  width: 100%;
+  max-width: 60rem;
+}
+
+.OnVisible__wrapper h1 {
+  text-align: left;
+}
+
+.LoadingModal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(51, 51, 51, 0.6);
+}
+
+.LoadingModal__text {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.LoadingModal__text::after {
+  display: inline-block;
+  content: "\f110";
+  font-family: FontAwesome;
+  margin-left: 1rem;
+  animation: spinInfinite 5s forwards;
+}
+
+@keyframes spinInfinite {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.PenCard {
+  position: relative;
+  -ms-flex-preferred-size: 17rem;
+      flex-basis: 17rem;
+  -ms-flex-positive: 1;
+      flex-grow: 1;
+  min-height: 250px;
+  margin: 1rem;
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: #CCC;
+}
+
+.PenCard:hover .PenCard__meta {
+  top: 0;
+}
+
+.PenCard__img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.PenCard__meta {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  padding: 0.5rem  1.5rem;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  transition: all 0.2s ease-in-out;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.PenCard__meta h3 {
+  font-size: 90%;
+}
+
+.PenCard__meta p {
+  font-size: 80%;
+}
+
+.PenCard__mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 3;
+}
+
+.Paginator {
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+
+.Paginator__wrapper {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
+  width: 100%;
+  max-width: 60rem;
+}
+
+.Paginator__controls {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.Paginator__button {
+  -ms-flex-positive: 1;
+      flex-grow: 1;
+}
+
+.Paginator__button a {
+  display: block;
+  padding: 1rem;
+  color: #CCC;
+  text-align: center;
+  border-radius: 10px;
+  background-color: #960c12;
+  transition: all 0.2s ease-in-out;
+}
+
+.Paginator__button a:hover {
+  background-color: #67080c;
+}
+
+.HomePage__content section {
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/280549/site-bg.png");
+  text-align: center;
+}
+
+.HomePage__content section h1,
+.HomePage__content section h2,
+.HomePage__content section h3,
+.HomePage__content section h4,
+.HomePage__content section h5,
+.HomePage__content section h6 {
+  text-align: center;
+}
+
+.HomePage__content .About {
+  padding-bottom: 1rem;
+}
+
+.HomePage__content .PopularPens {
+  position: relative;
+  min-height: 400px;
+  padding: 2rem 1rem;
+  margin-bottom: 2rem;
+}
+
+.HomePage__content .PopularPens__wrapper {
+  width: 100%;
+  max-width: 60rem;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: column nowrap;
+      flex-flow: column nowrap;
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+
+.HomePage__content .PopularPens__pens {
+  position: relative;
+  min-height: 250px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+
+.HomePage__content .PopularPens .PenCard {
+  text-align: left;
+}
+
+.HomePage__content .PopularPens .PenCard h1, .HomePage__content .PopularPens .PenCard h2, .HomePage__content .PopularPens .PenCard h3, .HomePage__content .PopularPens .PenCard h4, .HomePage__content .PopularPens .PenCard h5, .HomePage__content .PopularPens .PenCard h6 {
+  text-align: left;
+}
+
+.HomePage__content .PopularPens .Button {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-top: 2rem;
+}
+
+.AboutPage__content {
+  min-height: 875px;
+}
+
+.AboutPage__wrapper {
+  width: 100%;
+  max-width: 60rem;
+}
+
+.PensPage {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+
+.PensPage__wrapper {
+  width: 100%;
+  max-width: 60rem;
+}
+
+.PensPage__pens {
+  position: relative;
+  min-height: 400px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
+  margin: 0 -1rem;
+}

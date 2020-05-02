@@ -1,0 +1,11 @@
+.AboutPage {
+	&__content {
+		@extend %row;	
+		min-height: 875px;
+	}
+	
+	&__wrapper {
+		width: 100%;
+		max-width: $row-width;
+	}
+}

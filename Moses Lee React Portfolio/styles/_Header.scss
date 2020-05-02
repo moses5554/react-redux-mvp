@@ -1,0 +1,32 @@
+.Header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 10;
+
+	height: 100px;
+	width: 100%;
+
+	transition: all 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+	
+	&.sticky {
+		position: fixed;
+		top: 0;
+		left: 0;
+		
+		background-color: $color-dark-gray;
+		
+		.PrimaryNav {
+			&__logo {
+				height: 50px;
+				width: 50px;
+			}
+			
+			&__listItem {
+				a {
+					padding: 0.5rem 1rem;
+				}
+			}
+		}
+	}
+}

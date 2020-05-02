@@ -1,0 +1,11 @@
+%column {
+	display: flex;
+	justify-content: center;
+	flex-flow: column nowrap;
+}
+
+%row {
+	display: flex;
+	justify-content: center;
+	flex-flow: row wrap;
+}

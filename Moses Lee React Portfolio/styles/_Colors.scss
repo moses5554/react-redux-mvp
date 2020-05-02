@@ -1,0 +1,21 @@
+$color-blue: #32588F;
+
+$color-gray: #CCC;
+$color-dark-gray: #333;
+$color-gray-bullet: #818286;
+
+$color-error: #f00;
+
+$color-primary: $color-blue;
+$color-secondary: $color-gray;
+
+$color-primary-red: darken(#ed1b24, 20%);
+$color-primary-blue: #1d57af;
+$color-disabled-gray: #bfbaba;
+
+$color-error-red: lighten($color-primary-red, 10);
+
+$color-light-blue: #0799df;
+
+$color-links-text: #eee;
+$color-links-disabled: #cac7c9;

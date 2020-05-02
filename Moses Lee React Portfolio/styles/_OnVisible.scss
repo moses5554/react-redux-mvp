@@ -1,0 +1,19 @@
+.OnVisible {
+	@extend %row;
+	
+	opacity: 0;
+	
+	
+	&.visible {
+		opacity: 1;
+	}
+	
+	&__wrapper {
+		width: 100%;
+		max-width: $row-width;
+		
+		h1 {
+			text-align: left; 
+		}
+	}
+}
